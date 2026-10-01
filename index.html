@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Alunos</h1>
+
+    <input id="nome" placeholder="Nome" />
+    <input id="email" placeholder="E-mail" />
+    <input id="idade" type="number" placeholder="Idade">
+    <button onclick="salvar()">Salvar</button>
+
+    <button onclick="exportar()">💾 Exportar</button>
+    <input type="file" accept=".json" onchange="importar(event)" />
+    <button onclick="resetar()">🔄 Resetar</button>
+
+    <hr />
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>idade</th>
+        <th>Ações</th>
+      </tr>
+      <tbody id="lista"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
